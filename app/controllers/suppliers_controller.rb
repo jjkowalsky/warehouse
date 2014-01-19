@@ -88,4 +88,9 @@ class SuppliersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def supplier_params
+    params.require(:supplier).permit(:fname, :lname, :status, :city)
+  end
 end
