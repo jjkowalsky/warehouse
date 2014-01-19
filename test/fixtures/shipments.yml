@@ -1,0 +1,99 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  snum: 1
+  pnum: 1
+  qty: 300
+  price: .005
+
+two:
+  id: 2
+  snum: 1
+  pnum: 2
+  qty: 200
+  price: .009
+
+three:
+  id: 3
+  snum: 1
+  pnum: 3
+  qty: 400
+  price: .004
+
+four:
+  id: 4
+  snum: 1
+  pnum: 4
+  qty: 200
+  price: .009
+
+five:
+  id: 5
+  snum: 1
+  pnum: 5
+  qty: 100
+  price: .01
+
+six:
+  id: 6
+  snum: 1
+  pnum: 6
+  qty: 100
+  price: .01
+
+seven:
+  id: 7
+  snum: 2
+  pnum: 1
+  qty: 300
+  price: .006
+
+eight:
+  id: 8
+  snum: 2
+  pnum: 2
+  qty: 400
+  price: .004
+
+nine:
+  id: 9
+  snum: 3
+  pnum: 2
+  qty: 200
+  price: .009
+
+ten:
+  id: 10
+  snum: 3
+  pnum: 3
+  qty: 200
+  price:
+
+eleven:
+  id: 11
+  snum: 4
+  pnum: 2
+  qty: 200
+  price: .008
+
+twelve:
+  id: 12
+  snum: 4
+  pnum: 3
+  qty:
+  price:
+
+thirteen:
+  id: 13
+  snum: 4
+  pnum: 4
+  qty: 300
+  price: .006
+
+fourteen:
+  id: 14
+  snum: 4
+  pnum: 5
+  qty: 400
+  price: .003

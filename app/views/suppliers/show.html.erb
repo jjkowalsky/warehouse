@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-bordered">
+  <tr>
+    <td><b>First Name:</b></td>
+    <td><%= @supplier.fname %></td>
+  </tr>
+  <tr>
+    <td><b>Last Name:</b></td>
+    <td><%= @supplier.lname %></td>
+  </tr>
+  <tr>
+    <td><b>Status:</b></td>
+    <td><%= @supplier.status %></td>
+  </tr>
+  <tr>
+    <td><b>City:</b></td>
+    <td><%= @supplier.city %></td>
+  </tr>
+</table>
+
+
+<button class="btn btn-info"><%= link_to 'View Your Shipments', shipments_supplier_path(@supplier) %></button> |
+
+
+<button class="btn btn-info"><%= link_to 'Edit', edit_supplier_path(@supplier) %></button> |
+<button class="btn btn-info"><%= link_to 'Back', suppliers_path %></button>

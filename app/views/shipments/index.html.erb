@@ -1,0 +1,58 @@
+<h1>Listing shipments</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>Supplier #</th>
+    <th>Part #</th>
+    <th>Qty</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shipments.each do |shipment| %>
+  <tr>
+    <td><%= shipment.snum %></td>
+    <td><%= shipment.pnum %></td>
+    <td><%= shipment.qty %></td>
+    <td><%= shipment.price %></td>
+    <td><button class="btn btn-info"><%= link_to 'Show', shipment %></button></td>
+    <td><button class="btn"><%= link_to 'Edit', edit_shipment_path(shipment) %></button></td>
+    <td><button class="btn btn-warning"><%= link_to 'Destroy', shipment, confirm: 'Are you sure?', method: :delete %></button></td>
+  </tr>
+<% end %>
+</table>
+
+<!-- show individual shipments with all parts -->
+<!-- 
+<% @shipments.each do |shipment| %>
+<table class="table table-bordered">
+  <tr>
+    <th>Supplier #</th>
+    <th>Part #</th>
+    <th>Qty</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <tr>
+    <td><%= shipment.snum %></td>
+    <td><%= shipment.pnum %></td>
+    <td><%= shipment.qty %></td>
+    <td><%= shipment.price %></td>
+    <td><button class="btn btn-info"><%= link_to 'Show', shipment %></button></td>
+    <td><button class="btn"><%= link_to 'Edit', edit_shipment_path(shipment) %></button></td>
+    <td><button class="btn btn-warning"><%= link_to 'Destroy', shipment, confirm: 'Are you sure?', method: :delete %></button></td>
+  </tr>
+<% end %>
+</table>
+<br />
+ -->
+<!-- *** -->
+<br />
+
+<button class="btn btn-info"><%= link_to 'New Shipment', new_shipment_path %>
+</button>

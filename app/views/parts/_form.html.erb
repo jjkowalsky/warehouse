@@ -1,0 +1,33 @@
+<%= form_for(@part) do |f| %>
+  <% if @part.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@part.errors.count, "error") %> prohibited this part from being saved:</h2>
+
+      <ul>
+      <% @part.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Part Name" %>
+    <%= f.text_field :pname %>
+  </div>
+  <div class="field">
+    <%= f.label "Color" %>
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label "Weight" %>
+    <%= f.number_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label "City" %>
+    <%= f.text_field :city %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

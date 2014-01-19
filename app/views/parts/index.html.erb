@@ -1,0 +1,30 @@
+<h1>Listing parts</h1>
+
+<table class="table table-hover">
+  <tr>
+    <th>Part Name</th>
+    <th>Color</th>
+    <th>Weight</th>
+    <th>City</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @parts.each do |part| %>
+  <tr>
+    <td><%= part.pname %></td>
+    <td><%= part.color %></td>
+    <td><%= part.weight %></td>
+    <td><%= part.city %></td>
+    <td><button class="btn btn-info"><%= link_to 'Show', part %></button></td>
+    <td><button class="btn"><%= link_to 'Edit', edit_part_path(part) %></button></td>
+    <td><button class="btn btn-warning"><%= link_to 'Destroy', part, confirm: 'Are you sure?', method: :delete %></button></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<button class="btn btn-info"><%= link_to 'New Part', new_part_path %>
+</button>

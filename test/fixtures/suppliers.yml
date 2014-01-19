@@ -1,0 +1,36 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  fname:
+  lname: Smith
+  status: 20
+  city: London
+
+two:
+  id: 2
+  fname:
+  lname: Jones
+  status: 10
+  city: Paris
+
+three:
+  id: 3
+  fname:
+  lname: Blake
+  status: 30
+  city: Paris
+
+four:
+  id: 4
+  fname:
+  lname: Clark
+  status: 20
+  city: London
+
+five:
+  id: 5
+  fname:
+  lname: Adams
+  status: 30
+  city:

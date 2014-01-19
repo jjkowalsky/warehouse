@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-bordered">
+  <tr>
+    <td><b>Part Name:</b></td>
+    <td><%= @part.pname %></td>
+  </tr>
+  <tr>
+    <td><b>Color:</b></td>
+    <td><%= @part.color %></td>
+  </tr>
+  <tr>
+    <td><b>Weight:</b></td>
+    <td><%= @part.weight %></td>
+  </tr>
+  <tr>
+    <td><b>City:</b></td>
+    <td><%= @part.city %></td>
+  </tr>
+</table>
+
+<button class="btn btn-info"><%= link_to 'Edit', edit_part_path(@part) %></button> |
+<button class="btn btn-info"><%= link_to 'Back', parts_path %></button>

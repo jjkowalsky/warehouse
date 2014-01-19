@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-bordered">
+  <tr>
+    <td><b>Supplier #:</b></td>
+    <td><%= @shipment.snum %></td>
+  </tr>
+  <tr>
+    <td><b>Part #:</b></td>
+    <td><%= @shipment.pnum %></td>
+  </tr>
+  <tr>
+    <td><b>Qty:</b></td>
+    <td><%= @shipment.qty %></td>
+  </tr>
+  <tr>
+    <td><b>Price:</b></td>
+    <td><%= @shipment.price %></td>
+  </tr>
+</table>
+
+<button class="btn btn-info"><%= link_to 'Edit', edit_shipment_path(@shipment) %></button> |
+<button class="btn btn-info"><%= link_to 'Back', shipments_path %></button>
