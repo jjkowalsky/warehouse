@@ -26,10 +26,10 @@ class SuppliersController < ApplicationController
   def new
     @supplier = Supplier.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @supplier }
-    end
+    # respond_to do |format|
+    #   format.html # new.html.erb
+    #   format.json { render json: @supplier }
+    # end
   end
 
   # GET /suppliers/1/edit
