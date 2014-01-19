@@ -1,5 +1,5 @@
 WarehouseJoekowalskyCom::Application.routes.draw do
-    resources :parts
+  resources :parts
 
   resources :shipments
 
@@ -9,7 +9,8 @@ WarehouseJoekowalskyCom::Application.routes.draw do
 
   root :to => "home#index"
 
-  match "/home" => "home#index", :as => :home
+  get '/' => "home#index"
+  get "/home" => "home#index", :as => :home
   # match "/suppliers/:id/shipments" => "suppliers#shipments", :as => :supplier_shipments
   # alt for above, non-restful route
   resources :suppliers do
