@@ -40,7 +40,7 @@ class PartsController < ApplicationController
   # POST /parts
   # POST /parts.json
   def create
-    @part = Part.new(params[:part])
+    @part = Part.new(part_params)
 
     respond_to do |format|
       if @part.save
@@ -79,5 +79,10 @@ class PartsController < ApplicationController
       format.html { redirect_to parts_url }
       # format.json { head :no_content }
     end
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def part_params
+    params.require(:part).permit(:snum, :pnum, :qty, :price)
   end
 end

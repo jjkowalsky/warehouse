@@ -40,7 +40,7 @@ class ShipmentsController < ApplicationController
   # POST /shipments
   # POST /shipments.json
   def create
-    @shipment = Shipment.new(params[:shipment])
+    @shipment = Shipment.new(shipment_params)
 
     respond_to do |format|
       if @shipment.save
@@ -79,5 +79,10 @@ class ShipmentsController < ApplicationController
       format.html { redirect_to shipments_url }
       format.json { head :no_content }
     end
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def shipment_params
+    params.require(:shipment).permit(:snum, :pnum, :qty, :price)
   end
 end
