@@ -59,7 +59,7 @@ class ShipmentsController < ApplicationController
     @shipment = Shipment.find(params[:id])
 
     respond_to do |format|
-      if @shipment.update_attributes(params[:shipment])
+      if @shipment.update_attributes(shipment_params)
         format.html { redirect_to @shipment, notice: 'Shipment was successfully updated.' }
         format.json { head :no_content }
       else

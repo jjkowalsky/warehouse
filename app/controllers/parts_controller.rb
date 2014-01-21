@@ -59,7 +59,7 @@ class PartsController < ApplicationController
     @part = Part.find(params[:id])
 
     respond_to do |format|
-      if @part.update_attributes(params[:part])
+      if @part.update_attributes(part_params)
         format.html { redirect_to @part, notice: 'Part was successfully updated.' }
         # format.json { head :no_content }
       else
